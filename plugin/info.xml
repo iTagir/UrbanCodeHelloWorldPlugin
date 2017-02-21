@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pluginInfo>
+  <author name="IBM UrbanCode">
+    <organization>IBM UrbanCode</organization>
+    <email>ucplugin@us.ibm.com</email>
+    <website>https://developer.ibm.com/urbancode/plugins/</website>
+    <bio/>
+  </author>
+
+  <integration type="Deploy"/>
+   
+  <source url="https://developer.ibm.com/urbancode/plugins/"/>
+  
+  <licenses>
+    <license type="MIT License"/>
+  </licenses>
+
+  <tool-description>HelloWorld plug-in for IBM UrbanCode Deploy</tool-description>
+  
+  <related-info>
+    <link description="Documentation for IBM UrbanCode Deploy" 
+  title="IBM Knowledge Center" type="WEBSITE" 
+  url="http://www-01.ibm.com/support/knowledgecenter/SS4GSP/ucd_welcome.html"/>
+  </related-info>
+    
+  <release-version>1</release-version>
+    
+  <release-notes>
+     
+      <release-note plugin-version="1">
+ Initial release.
+      </release-note>
+  </release-notes>
+</pluginInfo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.urbancode.com/PluginXMLSchema_v1" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <identifier id="com.custom.HelloWorld" version="1" name="HelloWorld"/>
+    <description>Hello World UrbanCode Deploy plugin</description>
+    <tag>Custom/HelloWorld</tag>
+  </header>
+  <step-type name="Output message">
+    <description/>
+    <properties>
+      <property name="message" required="true">
+         <property-ui type="textBox" label="Message" 
+             description="Message to output" 
+             default-value=""/>
+      </property>
+    </properties>
+    <post-processing>
+      <![CDATA[
+        if (properties.get("exitCode") != 0) {
+            properties.put("Status", "Failure");
+        }
+        else {
+            properties.put("Status", "Success");
+        }
+     ]]>
+    </post-processing>
+
+    <command program="${JAVA_HOME}/bin/java">
+      <arg value="-jar"/>
+      <arg file="UCDHelloWorldPlugin.jar"/>
+      <arg file="${PLUGIN_INPUT_PROPS}"/>
+      <arg file="${PLUGIN_OUTPUT_PROPS}"/>
+    </command>
+  </step-type>
+</plugin>
